@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="header">
     <nav class="nav container">
@@ -23,11 +24,18 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#competencias">Competências</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#freelances">Freelances</a></li>
+        <li>
+          <button class="nav-profile-button active" data-profile="professional">
+            Perfil Profissional
+          </button>
+        </li>
+
+        <li>
+          <button class="nav-profile-button" data-profile="freelancer">
+            Perfil Freelancer
+          </button>
+        </li>
+
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -37,19 +45,40 @@
     <!-- HERO -->
     <section class="hero container">
       <div class="hero-content">
-        <p class="eyebrow">Backend • Java • Spring Boot • Microsserviços • APIs</p>
+        <!-- HERO PROFISSIONAL -->
+        <div class="hero-profile active" data-hero-profile="professional">
+          <p class="eyebrow">Backend • Java • Spring Boot • Microsserviços • APIs</p>
 
-        <h1>Desenvolvedor de Software Pleno</h1>
+          <h1>Desenvolvedor de Software Pleno</h1>
 
-        <p class="hero-text">
-          Atuo no desenvolvimento e manutenção de aplicações backend, microsserviços
-          e APIs, com foco em Java, Spring Boot, integrações entre sistemas,
-          mensageria, cloud, observabilidade e sustentação de aplicações críticas.
-        </p>
+          <p class="hero-text">
+            Atuo no desenvolvimento e manutenção de aplicações backend, microsserviços
+            e APIs, com foco em Java, Spring Boot, integrações entre sistemas,
+            mensageria, cloud, observabilidade e sustentação de aplicações críticas.
+          </p>
 
-        <div class="hero-actions">
-          <a href="#experiencia" class="btn primary">Ver experiência</a>
-          <a href="#projetos" class="btn secondary">Ver projetos</a>
+          <div class="hero-actions">
+            <a href="#experiencia" class="btn primary">Ver experiência</a>
+            <a href="#projetos" class="btn secondary">Ver projetos</a>
+          </div>
+        </div>
+
+        <!-- HERO FREELANCER -->
+        <div class="hero-profile" data-hero-profile="freelancer">
+          <p class="eyebrow">Freelancer • Automações • Dashboards • Landing Pages</p>
+
+          <h1>Soluções rápidas para negócios e profissionais</h1>
+
+          <p class="hero-text">
+            Também aceito projetos curtos e bem definidos como freelancer, com foco em
+            dashboards, automações, planilhas inteligentes, landing pages, integrações
+            simples e correções pontuais.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#servicos-freelancer" class="btn primary">Ver serviços</a>
+            <a href="#contato" class="btn secondary">Entrar em contato</a>
+          </div>
         </div>
 
         <div class="hero-meta">
@@ -60,545 +89,666 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section container">
-      <div class="section-heading">
-        <p class="section-label">Sobre</p>
-        <h2>Perfil profissional</h2>
-      </div>
-
-      <div class="about-grid">
-        <div>
-          <p>
-            Sou Desenvolvedor de Software Pleno, com experiência no desenvolvimento
-            e manutenção de aplicações backend, microsserviços e APIs em ambientes
-            corporativos.
-          </p>
-
-          <p>
-            Ao longo da minha trajetória, atuei em projetos para grandes empresas
-            dos setores financeiro e telecom, trabalhando com Java, Spring Boot,
-            integrações entre aplicações, mensageria, bancos de dados, cloud,
-            containers, observabilidade e práticas de sustentação.
-          </p>
-
-          <p>
-            Tenho vivência em times de desenvolvimento e sustentação, atuando em
-            manutenção de sistemas legados, criação de novas features, refatorações,
-            documentação, releases, hotfixes, bugfixes, testes automatizados e
-            monitoramento de aplicações.
-          </p>
-
-          <p>
-            Além da atuação profissional, também desenvolvo projetos próprios e aceito
-            trabalhos curtos como freelancer, principalmente em automações, dashboards,
-            integrações simples, landing pages e soluções sob demanda.
-          </p>
-        </div>
-
-        <aside class="profile-card">
-          <h3>Atuação principal</h3>
-          <ul>
-            <li>Desenvolvimento backend</li>
-            <li>APIs REST e microsserviços</li>
-            <li>Integrações entre sistemas</li>
-            <li>Mensageria e processamento assíncrono</li>
-            <li>Sustentação e evolução de aplicações</li>
-            <li>Observabilidade e monitoramento</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="section section-alt">
-      <div class="container">
+    <!-- CONTEÚDO PROFISSIONAL -->
+    <div class="profile-content active" data-profile-content="professional">
+      <!-- SOBRE -->
+      <section id="sobre" class="section container">
         <div class="section-heading">
-          <p class="section-label">Carreira</p>
-          <h2>Experiência profissional</h2>
+          <p class="section-label">Sobre</p>
+          <h2>Perfil profissional</h2>
         </div>
 
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3>Desenvolvedor de Software Pleno</h3>
-                  <p class="company">Foursys · Odontoprev — Mesa PIX/SUPERLINK</p>
-                </div>
-                <span class="period">Jan/2026 — Atual</span>
-              </div>
-              <ul>
-                <li>Atuação em desenvolvimento, manutenção e evolução de aplicações backend.</li>
-                <li>Desenvolvimento e sustentação de APIs e integrações entre sistemas em ambiente corporativo.</li>
-                <li>Integração entre aplicações para geração de QR Code PIX e Link de Pagamento.</li>
-                <li>Desenvolvimento de batches para processamento e acionamentos automatizados em horários específicos.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3>Engenheiro de Software Pleno</h3>
-                  <p class="company">Inmetrics · Santander — Mesa de Contas PJ</p>
-                </div>
-                <span class="period">Ago/2025 — Jan/2026</span>
-              </div>
-
-              <ul>
-                <li>Desenvolvimento e manutenção de microsserviços e APIs utilizando Java.</li>
-                <li>Integração entre aplicações em ambiente corporativo financeiro.</li>
-                <li>Comunicação com Mainframe utilizando Spring Boot e Apache Camel.</li>
-                <li>Apoio à sustentação e evolução de sistemas críticos.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3>Desenvolvedor de Software</h3>
-                  <p class="company">Mutant · Vivo — Meu Vivo Empresas B2B</p>
-                </div>
-                <span class="period">Jul/2024 — Ago/2025</span>
-              </div>
-
-              <ul>
-                <li>Manutenção de serviços legados e desenvolvimento de novas soluções para a plataforma web do MVE.</li>
-                <li>Atuação com Java 11/17, Python 3.7, RabbitMQ/Kafka, Redis e MongoDB.</li>
-                <li>Uso de Azure, Azure DevOps, Kubernetes e Docker.</li>
-                <li>Escrita de testes com Jest, JUnit, Stryker/PITest.</li>
-                <li>Documentação técnica e atuação com Kanban/Jira.</li>
-                <li>Responsável pela monitoria e metrificação de módulo de contas com foco em SRE.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3>Programador de Sistemas Júnior</h3>
-                  <p class="company">Metasix Tecnologia</p>
-                </div>
-                <span class="period">Ago/2023 — Mai/2024</span>
-              </div>
-
-              <ul>
-                <li>Manutenção e refatoração de código.</li>
-                <li>Criação de novas features.</li>
-                <li>Desenvolvimento web e documentação técnica.</li>
-                <li>Releases em ambientes de desenvolvimento, homologação e produção.</li>
-                <li>Atuação em canais de urgência com hotfixes e bugfixes.</li>
-                <li>Atuação em time de sustentação.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <div>
-                  <h3>Assistente de Programação</h3>
-                  <p class="company">Metasix Tecnologia</p>
-                </div>
-                <span class="period">Ago/2021 — Ago/2023</span>
-              </div>
-
-              <ul>
-                <li>Manutenção e refatoração de código.</li>
-                <li>Desenvolvimento web.</li>
-                <li>Documentação técnica.</li>
-                <li>Apoio a demandas de sustentação.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPETÊNCIAS -->
-    <section id="competencias" class="section container">
-      <div class="section-heading">
-        <p class="section-label">Stack</p>
-        <h2>Competências técnicas</h2>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Backend</h3>
-          <div class="tags">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>Spring Framework</span>
-            <span>JPA / Hibernate</span>
-            <span>Maven</span>
-            <span>Node.js</span>
-            <span>Nest.js</span>
-            <span>Python</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <h3>Microsserviços e integrações</h3>
-          <div class="tags">
-            <span>APIs REST</span>
-            <span>Microsserviços</span>
-            <span>Apache Camel</span>
-            <span>Mainframe</span>
-            <span>RabbitMQ</span>
-            <span>Kafka</span>
-            <span>Redis</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <h3>Bancos de dados</h3>
-          <div class="tags">
-            <span>PostgreSQL</span>
-            <span>MongoDB</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <h3>Cloud, DevOps e infraestrutura</h3>
-          <div class="tags">
-            <span>Docker</span>
-            <span>Kubernetes</span>
-            <span>Azure</span>
-            <span>Azure DevOps</span>
-            <span>Jenkins</span>
-            <span>Nginx</span>
-            <span>Spinnaker</span>
-            <span>K9s</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <h3>Observabilidade e qualidade</h3>
-          <div class="tags">
-            <span>Grafana</span>
-            <span>Kibana</span>
-            <span>Sonar</span>
-            <span>JUnit</span>
-            <span>Jest</span>
-            <span>Stryker</span>
-            <span>PITest</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <h3>Front-end / Web</h3>
-          <div class="tags">
-            <span>JavaScript</span>
-            <span>Angular</span>
-            <span>Thymeleaf</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>jQuery</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section id="projetos" class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Portfólio</p>
-          <h2>Projetos principais</h2>
-        </div>
-
-        <p class="section-intro">
-          Projetos pessoais e desafios técnicos desenvolvidos com foco em backend,
-          microsserviços, APIs, integrações, infraestrutura local com Docker e boas
-          práticas de desenvolvimento.
-        </p>
-
-        <div class="featured-project">
+        <div class="about-grid">
           <div>
-            <span class="project-status">Projeto principal</span>
-            <h3>Ecossistema PorygonZ — Microsserviços Pokémon</h3>
             <p>
-              Conjunto de microsserviços inspirado no universo Pokémon, construído para
-              demonstrar arquitetura distribuída, comunicação entre serviços, API Gateway,
-              cache, persistência, integração com APIs externas, infraestrutura local com
-              Docker Compose e evolução para recursos de IA.
+              Sou Desenvolvedor de Software Pleno, com experiência no desenvolvimento
+              e manutenção de aplicações backend, microsserviços e APIs em ambientes
+              corporativos.
             </p>
 
             <p>
-              O projeto é composto por serviços independentes em Java/Spring Boot e Python/FastAPI,
-              organizados por responsabilidade e orquestrados por um repositório de infraestrutura.
+              Ao longo da minha trajetória, atuei em projetos para grandes empresas
+              dos setores financeiro e telecom, trabalhando com Java, Spring Boot,
+              integrações entre aplicações, mensageria, bancos de dados, cloud,
+              containers, observabilidade e práticas de sustentação.
+            </p>
+
+            <p>
+              Tenho vivência em times de desenvolvimento e sustentação, atuando em
+              manutenção de sistemas legados, criação de novas features, refatorações,
+              documentação, releases, hotfixes, bugfixes, testes automatizados e
+              monitoramento de aplicações.
+            </p>
+
+            <p>
+              Além da atuação profissional, também desenvolvo projetos próprios e aceito
+              trabalhos curtos como freelancer, principalmente em automações, dashboards,
+              integrações simples, landing pages e soluções sob demanda.
             </p>
           </div>
 
-          <div class="project-tech">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>Spring Cloud Gateway</span>
-            <span>Python</span>
-            <span>FastAPI</span>
-            <span>Docker Compose</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-            <span>Microsserviços</span>
+          <aside class="profile-card">
+            <h3>Atuação principal</h3>
+            <ul>
+              <li>Desenvolvimento backend</li>
+              <li>APIs REST e microsserviços</li>
+              <li>Integrações entre sistemas</li>
+              <li>Mensageria e processamento assíncrono</li>
+              <li>Sustentação e evolução de aplicações</li>
+              <li>Observabilidade e monitoramento</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- EXPERIÊNCIA -->
+      <section id="experiencia" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Carreira</p>
+            <h2>Experiência profissional</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Desenvolvedor de Software Pleno</h3>
+                    <p class="company">Foursys · Tempo integral</p>
+                  </div>
+
+                  <span class="period">Jan/2026 — Atual</span>
+                </div>
+
+                <ul>
+                  <li>Desenvolvimento, manutenção e evolução de aplicações backend em ambiente corporativo.</li>
+                  <li>Construção e sustentação de APIs e integrações entre sistemas.</li>
+                  <li>Integração entre aplicações para geração de QR Code PIX e Link de Pagamento.</li>
+                  <li>Integração com Cielo para criação automatizada de PIX e Superlinks de pagamento.</li>
+                  <li>Implementação de batches para processamento e acionamentos automatizados em horários específicos.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Engenheiro de Software Pleno</h3>
+                    <p class="company">Inmetrics · Santander — Mesa de Contas PJ</p>
+                  </div>
+
+                  <span class="period">Ago/2025 — Jan/2026</span>
+                </div>
+
+                <ul>
+                  <li>Desenvolvimento e manutenção de microsserviços e APIs utilizando Java.</li>
+                  <li>Integração entre aplicações em ambiente corporativo financeiro.</li>
+                  <li>Comunicação com Mainframe utilizando Spring Boot e Apache Camel.</li>
+                  <li>Apoio à sustentação e evolução de sistemas críticos.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Desenvolvedor de Software</h3>
+                    <p class="company">Mutant · Vivo — Meu Vivo Empresas B2B</p>
+                  </div>
+
+                  <span class="period">Jul/2024 — Ago/2025</span>
+                </div>
+
+                <ul>
+                  <li>Manutenção de serviços legados e desenvolvimento de novas soluções para a plataforma web do MVE.</li>
+                  <li>Atuação com Java 11/17, Python 3.7, RabbitMQ/Kafka, Redis e MongoDB.</li>
+                  <li>Uso de Azure, Azure DevOps, Kubernetes e Docker.</li>
+                  <li>Escrita de testes com Jest, JUnit, Stryker/PITest.</li>
+                  <li>Documentação técnica e atuação com Kanban/Jira.</li>
+                  <li>Responsável pela monitoria e metrificação de módulo de contas com foco em SRE.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Programador de Sistemas Júnior</h3>
+                    <p class="company">Metasix Tecnologia</p>
+                  </div>
+
+                  <span class="period">Ago/2023 — Mai/2024</span>
+                </div>
+
+                <ul>
+                  <li>Manutenção e refatoração de código.</li>
+                  <li>Criação de novas features.</li>
+                  <li>Desenvolvimento web e documentação técnica.</li>
+                  <li>Releases em ambientes de desenvolvimento, homologação e produção.</li>
+                  <li>Atuação em canais de urgência com hotfixes e bugfixes.</li>
+                  <li>Atuação em time de sustentação.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Assistente de Programação</h3>
+                    <p class="company">Metasix Tecnologia</p>
+                  </div>
+
+                  <span class="period">Ago/2021 — Ago/2023</span>
+                </div>
+
+                <ul>
+                  <li>Manutenção e refatoração de código.</li>
+                  <li>Desenvolvimento web.</li>
+                  <li>Documentação técnica.</li>
+                  <li>Apoio a demandas de sustentação.</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-status">Gateway</span>
-            <h3>porygonz-gateway</h3>
-            <p>
-              API Gateway responsável por centralizar o contrato público do ecossistema,
-              roteando chamadas HTTP para os microserviços internos de Pokedex, comparação
-              de tipos e fusões com IA.
-            </p>
+      <!-- COMPETÊNCIAS -->
+      <section id="competencias" class="section container">
+        <div class="section-heading">
+          <p class="section-label">Stack</p>
+          <h2>Competências técnicas</h2>
+        </div>
 
-            <ul class="project-list">
-              <li>Rotas versionadas em <code>/api/v1/**</code></li>
-              <li>Centralização de CORS</li>
-              <li>Roteamento para serviços internos</li>
-              <li>Spring Cloud Gateway com WebFlux</li>
-            </ul>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Backend</h3>
+            <div class="tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring Framework</span>
+              <span>JPA / Hibernate</span>
+              <span>Maven</span>
+              <span>Node.js</span>
+              <span>Nest.js</span>
+              <span>Python</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Microsserviços e integrações</h3>
+            <div class="tags">
+              <span>APIs REST</span>
+              <span>Microsserviços</span>
+              <span>Apache Camel</span>
+              <span>Mainframe</span>
+              <span>RabbitMQ</span>
+              <span>Kafka</span>
+              <span>Redis</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Bancos de dados</h3>
+            <div class="tags">
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Cloud, DevOps e infraestrutura</h3>
+            <div class="tags">
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>Azure</span>
+              <span>Azure DevOps</span>
+              <span>Jenkins</span>
+              <span>Nginx</span>
+              <span>Spinnaker</span>
+              <span>K9s</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Observabilidade e qualidade</h3>
+            <div class="tags">
+              <span>Grafana</span>
+              <span>Kibana</span>
+              <span>Sonar</span>
+              <span>JUnit</span>
+              <span>Jest</span>
+              <span>Stryker</span>
+              <span>PITest</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Front-end / Web</h3>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Angular</span>
+              <span>Thymeleaf</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>jQuery</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJETOS PROFISSIONAIS -->
+      <section id="projetos" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Portfólio</p>
+            <h2>Projetos principais</h2>
+          </div>
+
+          <p class="section-intro">
+            Projetos pessoais e desafios técnicos desenvolvidos com foco em backend,
+            microsserviços, APIs, integrações, infraestrutura local com Docker e boas
+            práticas de desenvolvimento.
+          </p>
+
+          <div class="featured-project">
+            <div>
+              <span class="project-status">Projeto principal</span>
+              <h3>Ecossistema PorygonZ — Microsserviços Pokémon</h3>
+
+              <p>
+                Conjunto de microsserviços inspirado no universo Pokémon, construído para
+                demonstrar arquitetura distribuída, comunicação entre serviços, API Gateway,
+                cache, persistência, integração com APIs externas, infraestrutura local com
+                Docker Compose e evolução para recursos de IA.
+              </p>
+
+              <p>
+                O projeto é composto por serviços independentes em Java/Spring Boot e Python/FastAPI,
+                organizados por responsabilidade e orquestrados por um repositório de infraestrutura.
+              </p>
+            </div>
 
             <div class="project-tech">
               <span>Java</span>
               <span>Spring Boot</span>
               <span>Spring Cloud Gateway</span>
-              <span>WebFlux</span>
-            </div>
-
-            <a class="project-link" href="https://github.com/DanielSanoli/porygonz-gateway" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-status">Pokedex Service</span>
-            <h3>microservices-gym-leader</h3>
-            <p>
-              Microserviço responsável por consultar dados de Pokémon e disponibilizar uma
-              API interna versionada, servindo como base para outros serviços do ecossistema.
-            </p>
-
-            <ul class="project-list">
-              <li>Consulta de Pokémon por ID ou nome</li>
-              <li>Integração com PokeAPI</li>
-              <li>Persistência com PostgreSQL</li>
-              <li>Cache com Redis</li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>PostgreSQL</span>
-              <span>Redis</span>
-              <span>PokeAPI</span>
-            </div>
-
-            <a class="project-link" href="https://github.com/DanielSanoli/microservices-gym-leader" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-status">Comparator Service</span>
-            <h3>microservices-typematch</h3>
-            <p>
-              Microserviço para comparar tipos, vantagens e desvantagens entre dois Pokémon,
-              consumindo dados do serviço Gym Leader e expondo uma API própria.
-            </p>
-
-            <ul class="project-list">
-              <li>Comparação entre dois Pokémon</li>
-              <li>Consumo HTTP de serviço interno</li>
-              <li>API versionada em <code>/api/v1/compare/**</code></li>
-              <li>Integração com o gateway</li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>RestTemplate</span>
-              <span>APIs REST</span>
-            </div>
-
-            <a class="project-link" href="https://github.com/DanielSanoli/microservices-typematch" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-status">IA / FastAPI</span>
-            <h3>fusion-ia-api</h3>
-            <p>
-              API em Python/FastAPI para solicitar fusões de Pokémon, montar prompts e
-              evoluir para um pipeline de geração de imagens com IA.
-            </p>
-
-            <ul class="project-list">
-              <li>Endpoints para criação e consulta de fusões</li>
-              <li>Pipeline inicial com prompt builder</li>
-              <li>Backend stub para geração</li>
-              <li>Planejamento para persistência e imagens</li>
-            </ul>
-
-            <div class="project-tech">
               <span>Python</span>
               <span>FastAPI</span>
-              <span>Pydantic</span>
-              <span>IA</span>
-              <span>Uvicorn</span>
-            </div>
-
-            <a class="project-link" href="https://github.com/DanielSanoli/fusion-ia-api" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
-          </article>
-
-          <article class="project-card">
-            <span class="project-status">Infraestrutura</span>
-            <h3>microservices-infra</h3>
-            <p>
-              Repositório de infraestrutura responsável por orquestrar localmente os
-              serviços do ecossistema com Docker Compose, incluindo gateway, microserviços,
-              Postgres e Redis.
-            </p>
-
-            <ul class="project-list">
-              <li>Ambiente local com Docker Compose</li>
-              <li>Orquestração dos microserviços</li>
-              <li>PostgreSQL e Redis</li>
-              <li>Documentação da arquitetura com Mermaid</li>
-            </ul>
-
-            <div class="project-tech">
-              <span>Docker</span>
               <span>Docker Compose</span>
               <span>PostgreSQL</span>
               <span>Redis</span>
-              <span>Makefile</span>
+              <span>Microsserviços</span>
             </div>
+          </div>
 
-            <a class="project-link" href="https://github.com/DanielSanoli/microservices-infra" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
-          </article>
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-status">Gateway</span>
+              <h3>porygonz-gateway</h3>
 
-          <article class="project-card">
-            <span class="project-status">Desafio técnico</span>
-            <h3>gitmanager</h3>
+              <p>
+                API Gateway responsável por centralizar o contrato público do ecossistema,
+                roteando chamadas HTTP para os microserviços internos de Pokedex, comparação
+                de tipos e fusões com IA.
+              </p>
+
+              <ul class="project-list">
+                <li>Rotas versionadas em <code>/api/v1/**</code></li>
+                <li>Centralização de CORS</li>
+                <li>Roteamento para serviços internos</li>
+                <li>Spring Cloud Gateway com WebFlux</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Spring Cloud Gateway</span>
+                <span>WebFlux</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/porygonz-gateway" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">Pokedex Service</span>
+              <h3>microservices-gym-leader</h3>
+
+              <p>
+                Microserviço responsável por consultar dados de Pokémon e disponibilizar uma
+                API interna versionada, servindo como base para outros serviços do ecossistema.
+              </p>
+
+              <ul class="project-list">
+                <li>Consulta de Pokémon por ID ou nome</li>
+                <li>Integração com PokeAPI</li>
+                <li>Persistência com PostgreSQL</li>
+                <li>Cache com Redis</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>PokeAPI</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/microservices-gym-leader" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">Comparator Service</span>
+              <h3>microservices-typematch</h3>
+
+              <p>
+                Microserviço para comparar tipos, vantagens e desvantagens entre dois Pokémon,
+                consumindo dados do serviço Gym Leader e expondo uma API própria.
+              </p>
+
+              <ul class="project-list">
+                <li>Comparação entre dois Pokémon</li>
+                <li>Consumo HTTP de serviço interno</li>
+                <li>API versionada em <code>/api/v1/compare/**</code></li>
+                <li>Integração com o gateway</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>RestTemplate</span>
+                <span>APIs REST</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/microservices-typematch" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">IA / FastAPI</span>
+              <h3>fusion-ia-api</h3>
+
+              <p>
+                API em Python/FastAPI para solicitar fusões de Pokémon, montar prompts e
+                evoluir para um pipeline de geração de imagens com IA.
+              </p>
+
+              <ul class="project-list">
+                <li>Endpoints para criação e consulta de fusões</li>
+                <li>Pipeline inicial com prompt builder</li>
+                <li>Backend stub para geração</li>
+                <li>Planejamento para persistência e imagens</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Pydantic</span>
+                <span>IA</span>
+                <span>Uvicorn</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/fusion-ia-api" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">Infraestrutura</span>
+              <h3>microservices-infra</h3>
+
+              <p>
+                Repositório de infraestrutura responsável por orquestrar localmente os
+                serviços do ecossistema com Docker Compose, incluindo gateway, microserviços,
+                Postgres e Redis.
+              </p>
+
+              <ul class="project-list">
+                <li>Ambiente local com Docker Compose</li>
+                <li>Orquestração dos microserviços</li>
+                <li>PostgreSQL e Redis</li>
+                <li>Documentação da arquitetura com Mermaid</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Docker</span>
+                <span>Docker Compose</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>Makefile</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/microservices-infra" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">Desafio técnico</span>
+              <h3>gitmanager</h3>
+
+              <p>
+                Serviço de gerenciamento de perfis do GitHub desenvolvido como desafio técnico,
+                com sincronização de usuários, persistência em banco de dados, APIs REST e
+                autenticação via token.
+              </p>
+
+              <ul class="project-list">
+                <li>Busca de usuários na API pública do GitHub</li>
+                <li>Persistência com JPA/Hibernate</li>
+                <li>Relacionamento entre usuários e perfis</li>
+                <li>APIs REST para criação, atribuição e listagem</li>
+                <li>Autenticação via JWT</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>JPA</span>
+                <span>Hibernate</span>
+                <span>JWT</span>
+                <span>REST API</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/gitmanager" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CONTEÚDO FREELANCER -->
+    <div class="profile-content" data-profile-content="freelancer">
+      <section id="servicos-freelancer" class="section container">
+        <div class="section-heading">
+          <p class="section-label">Freelancer</p>
+          <h2>Serviços e soluções sob demanda</h2>
+        </div>
+
+        <p class="section-intro">
+          Aceito projetos curtos e bem definidos como freelancer, com foco em soluções
+          práticas, entrega objetiva e escopo fechado. A ideia é ajudar profissionais,
+          pequenos negócios e equipes que precisam resolver problemas pontuais sem contratar
+          um desenvolvimento longo.
+        </p>
+
+        <div class="freelance-grid">
+          <article class="freelance-card">
+            <h3>Dashboards e relatórios</h3>
+
             <p>
-              Serviço de gerenciamento de perfis do GitHub desenvolvido como desafio técnico,
-              com sincronização de usuários, persistência em banco de dados, APIs REST e
-              autenticação via token.
+              Criação de painéis em Power BI, Excel ou Google Sheets para transformar
+              relatórios em indicadores visuais e facilitar a tomada de decisão.
             </p>
 
-            <ul class="project-list">
-              <li>Busca de usuários na API pública do GitHub</li>
-              <li>Persistência com JPA/Hibernate</li>
-              <li>Relacionamento entre usuários e perfis</li>
-              <li>APIs REST para criação, atribuição e listagem</li>
-              <li>Autenticação via JWT</li>
+            <ul>
+              <li>Dashboards financeiros</li>
+              <li>Relatórios de chamados e ordens de serviço</li>
+              <li>Indicadores de produtividade</li>
+              <li>Organização visual de dados</li>
             </ul>
+          </article>
 
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Spring Boot</span>
-              <span>JPA</span>
-              <span>Hibernate</span>
-              <span>JWT</span>
-              <span>REST API</span>
-            </div>
+          <article class="freelance-card">
+            <h3>Automação de planilhas</h3>
 
-            <a class="project-link" href="https://github.com/DanielSanoli/gitmanager" target="_blank" rel="noopener">
-              Ver repositório
-            </a>
+            <p>
+              Organização e automação de planilhas com fórmulas, validações, dashboards,
+              controles financeiros e scripts simples.
+            </p>
+
+            <ul>
+              <li>Google Sheets</li>
+              <li>Excel</li>
+              <li>Google Apps Script</li>
+              <li>Controles mensais e projeções</li>
+            </ul>
+          </article>
+
+          <article class="freelance-card">
+            <h3>Landing pages</h3>
+
+            <p>
+              Criação de páginas simples, responsivas e objetivas para apresentação de
+              serviços, produtos, profissionais ou pequenos negócios.
+            </p>
+
+            <ul>
+              <li>HTML, CSS e JavaScript</li>
+              <li>Páginas institucionais</li>
+              <li>Portfólios simples</li>
+              <li>Botões de contato e WhatsApp</li>
+            </ul>
+          </article>
+
+          <article class="freelance-card">
+            <h3>Correções e ajustes</h3>
+
+            <p>
+              Ajustes pontuais em sites, formulários, páginas, integrações simples e
+              correção de pequenos bugs.
+            </p>
+
+            <ul>
+              <li>Correção visual</li>
+              <li>Ajustes responsivos</li>
+              <li>Melhorias em formulários</li>
+              <li>Correções de comportamento</li>
+            </ul>
+          </article>
+
+          <article class="freelance-card">
+            <h3>Integrações simples</h3>
+
+            <p>
+              Integrações leves com APIs, formulários, planilhas e sistemas externos para
+              reduzir tarefas manuais.
+            </p>
+
+            <ul>
+              <li>Consumo de APIs</li>
+              <li>Envio de dados para planilhas</li>
+              <li>Formulários conectados</li>
+              <li>Automação de fluxos simples</li>
+            </ul>
+          </article>
+
+          <article class="freelance-card">
+            <h3>Scripts e automações</h3>
+
+            <p>
+              Pequenos scripts para automatizar tarefas repetitivas e melhorar processos
+              internos de equipes e profissionais.
+            </p>
+
+            <ul>
+              <li>Scripts em JavaScript ou Python</li>
+              <li>Tratamento de arquivos</li>
+              <li>Automação de tarefas manuais</li>
+              <li>Rotinas simples sob demanda</li>
+            </ul>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- FREELANCES -->
-    <section id="freelances" class="section container">
-      <div class="section-heading">
-        <p class="section-label">Serviços</p>
-        <h2>Freelances e soluções sob demanda</h2>
-      </div>
+        <div class="freelance-note">
+          <strong>Modelo de trabalho:</strong>
+          projetos de escopo fechado, prazo curto e entregas objetivas.
+        </div>
+      </section>
 
-      <p class="section-intro">
-        Além da atuação profissional como Desenvolvedor de Software, também aceito
-        projetos curtos e bem definidos como freelancer. Meu foco é ajudar profissionais
-        e pequenos negócios com soluções práticas, de rápida entrega e escopo claro.
-      </p>
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Como funciona</p>
+            <h2>Fluxo de trabalho freelance</h2>
+          </div>
 
-      <div class="freelance-grid">
-        <article class="freelance-card">
-          <h3>Dashboards e relatórios</h3>
-          <p>
-            Criação de painéis em Power BI, Excel ou Google Sheets para transformar
-            relatórios em indicadores visuais.
-          </p>
-        </article>
+          <div class="process-grid">
+            <article class="process-card">
+              <span>1</span>
+              <h3>Entendimento</h3>
+              <p>
+                Conversamos sobre o problema, objetivo, prazo e resultado esperado.
+              </p>
+            </article>
 
-        <article class="freelance-card">
-          <h3>Automação de planilhas</h3>
-          <p>
-            Organização de planilhas, fórmulas, scripts, dashboards e processos automatizados.
-          </p>
-        </article>
+            <article class="process-card">
+              <span>2</span>
+              <h3>Escopo fechado</h3>
+              <p>
+                Definimos exatamente o que será entregue para evitar retrabalho e ambiguidades.
+              </p>
+            </article>
 
-        <article class="freelance-card">
-          <h3>Landing pages</h3>
-          <p>
-            Criação de páginas simples e responsivas para apresentação de serviços,
-            produtos ou negócios.
-          </p>
-        </article>
+            <article class="process-card">
+              <span>3</span>
+              <h3>Desenvolvimento</h3>
+              <p>
+                A solução é construída com comunicação clara e checkpoints quando necessário.
+              </p>
+            </article>
 
-        <article class="freelance-card">
-          <h3>Correções e ajustes</h3>
-          <p>
-            Correção de bugs, melhorias visuais, ajustes em formulários e pequenas alterações.
-          </p>
-        </article>
+            <article class="process-card">
+              <span>4</span>
+              <h3>Entrega</h3>
+              <p>
+                Entrego o projeto finalizado, com orientações básicas de uso e manutenção.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
 
-        <article class="freelance-card">
-          <h3>Integrações simples</h3>
-          <p>
-            Integrações com APIs, formulários, planilhas e sistemas externos.
-          </p>
-        </article>
-
-        <article class="freelance-card">
-          <h3>Scripts e automações</h3>
-          <p>
-            Pequenos scripts para reduzir tarefas manuais e melhorar processos internos.
-          </p>
-        </article>
-      </div>
-
-      <div class="freelance-note">
-        <strong>Modelo de trabalho:</strong>
-        projetos de escopo fechado, prazo curto e entregas objetivas.
-      </div>
-    </section>
-
-    <!-- CONTATO -->
+    <!-- CONTATO SEMPRE VISÍVEL -->
     <section id="contato" class="section section-dark">
       <div class="container contact-section">
         <div>
           <p class="section-label light">Contato</p>
           <h2>Vamos conversar?</h2>
+
           <p>
             Se você precisa de um desenvolvedor para projetos backend, APIs,
             integrações ou soluções pontuais de automação, entre em contato.
@@ -608,8 +758,18 @@
         <div class="contact-links">
           <a href="mailto:daniel.sanoli28@gmail.com">daniel.sanoli28@gmail.com</a>
           <a href="https://github.com/DanielSanoli" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/daniel-oliveira-7b1063188/">Linkedin</a>
-
+          <a href="https://www.linkedin.com/in/daniel-oliveira-7b1063188/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Daniel Oliveira. Desenvolvedor de Software Pleno.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
