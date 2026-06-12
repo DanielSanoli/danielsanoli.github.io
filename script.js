@@ -1,63 +1,65 @@
-const menuButton = document.getElementById("menuButton");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
 
-if (menuButton && navLinks) {
-  menuButton.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
-
-  document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-    });
-  });
-}
-
-const profileButtons = document.querySelectorAll(".nav-profile-button");
-const profileContents = document.querySelectorAll(".profile-content");
-const heroProfiles = document.querySelectorAll(".hero-profile");
-
-profileButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const selectedProfile = button.dataset.profile;
-
-    profileButtons.forEach((item) => {
-      item.classList.remove("active");
+  if (menuButton && navLinks) {
+    menuButton.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
     });
 
-    profileContents.forEach((content) => {
-      content.classList.remove("active");
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
     });
+  }
 
-    heroProfiles.forEach((hero) => {
-      hero.classList.remove("active");
-    });
+  const profileButtons = document.querySelectorAll(".nav-profile-button");
+  const profileContents = document.querySelectorAll(".profile-content");
+  const heroProfiles = document.querySelectorAll(".hero-profile");
 
-    button.classList.add("active");
+  profileButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedProfile = button.dataset.profile;
 
-    const activeContent = document.querySelector(
-      `[data-profile-content="${selectedProfile}"]`
-    );
+      profileButtons.forEach((item) => {
+        item.classList.remove("active");
+      });
 
-    const activeHero = document.querySelector(
-      `[data-hero-profile="${selectedProfile}"]`
-    );
+      profileContents.forEach((content) => {
+        content.classList.remove("active");
+      });
 
-    if (activeContent) {
-      activeContent.classList.add("active");
-    }
+      heroProfiles.forEach((hero) => {
+        hero.classList.remove("active");
+      });
 
-    if (activeHero) {
-      activeHero.classList.add("active");
-    }
+      button.classList.add("active");
 
-    if (navLinks) {
-      navLinks.classList.remove("open");
-    }
+      const activeContent = document.querySelector(
+        `[data-profile-content="${selectedProfile}"]`
+      );
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+      const activeHero = document.querySelector(
+        `[data-hero-profile="${selectedProfile}"]`
+      );
+
+      if (activeContent) {
+        activeContent.classList.add("active");
+      }
+
+      if (activeHero) {
+        activeHero.classList.add("active");
+      }
+
+      if (navLinks) {
+        navLinks.classList.remove("open");
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   });
 });
