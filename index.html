@@ -49,7 +49,7 @@
 
         <div class="hero-actions">
           <a href="#experiencia" class="btn primary">Ver experiência</a>
-          <a href="#freelances" class="btn secondary">Serviços freelance</a>
+          <a href="#projetos" class="btn secondary">Ver projetos</a>
         </div>
 
         <div class="hero-meta">
@@ -87,6 +87,12 @@
             manutenção de sistemas legados, criação de novas features, refatorações,
             documentação, releases, hotfixes, bugfixes, testes automatizados e
             monitoramento de aplicações.
+          </p>
+
+          <p>
+            Além da atuação profissional, também desenvolvo projetos próprios e aceito
+            trabalhos curtos como freelancer, principalmente em automações, dashboards,
+            integrações simples, landing pages e soluções sob demanda.
           </p>
         </div>
 
@@ -308,70 +314,215 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-label">Portfólio</p>
-          <h2>Projetos</h2>
+          <h2>Projetos principais</h2>
         </div>
 
         <p class="section-intro">
-          Esta seção será atualizada com projetos pessoais, estudos técnicos e soluções
-          desenvolvidas para demonstrar minha experiência prática com Java, Spring Boot,
-          APIs, automações, dashboards e desenvolvimento web.
+          Projetos pessoais e desafios técnicos desenvolvidos com foco em backend,
+          microsserviços, APIs, integrações, infraestrutura local com Docker e boas
+          práticas de desenvolvimento.
         </p>
+
+        <div class="featured-project">
+          <div>
+            <span class="project-status">Projeto principal</span>
+            <h3>Ecossistema PorygonZ — Microsserviços Pokémon</h3>
+            <p>
+              Conjunto de microsserviços inspirado no universo Pokémon, construído para
+              demonstrar arquitetura distribuída, comunicação entre serviços, API Gateway,
+              cache, persistência, integração com APIs externas, infraestrutura local com
+              Docker Compose e evolução para recursos de IA.
+            </p>
+
+            <p>
+              O projeto é composto por serviços independentes em Java/Spring Boot e Python/FastAPI,
+              organizados por responsabilidade e orquestrados por um repositório de infraestrutura.
+            </p>
+          </div>
+
+          <div class="project-tech">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Spring Cloud Gateway</span>
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Docker Compose</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+            <span>Microsserviços</span>
+          </div>
+        </div>
 
         <div class="project-grid">
           <article class="project-card">
-            <span class="project-status">Em breve</span>
-            <h3>API Java / Spring Boot</h3>
+            <span class="project-status">Gateway</span>
+            <h3>porygonz-gateway</h3>
             <p>
-              Projeto backend com arquitetura em camadas, persistência, validações,
-              testes e boas práticas de desenvolvimento.
+              API Gateway responsável por centralizar o contrato público do ecossistema,
+              roteando chamadas HTTP para os microserviços internos de Pokedex, comparação
+              de tipos e fusões com IA.
             </p>
+
+            <ul class="project-list">
+              <li>Rotas versionadas em <code>/api/v1/**</code></li>
+              <li>Centralização de CORS</li>
+              <li>Roteamento para serviços internos</li>
+              <li>Spring Cloud Gateway com WebFlux</li>
+            </ul>
+
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Spring Cloud Gateway</span>
+              <span>WebFlux</span>
+            </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/porygonz-gateway" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">Pokedex Service</span>
+            <h3>microservices-gym-leader</h3>
+            <p>
+              Microserviço responsável por consultar dados de Pokémon e disponibilizar uma
+              API interna versionada, servindo como base para outros serviços do ecossistema.
+            </p>
+
+            <ul class="project-list">
+              <li>Consulta de Pokémon por ID ou nome</li>
+              <li>Integração com PokeAPI</li>
+              <li>Persistência com PostgreSQL</li>
+              <li>Cache com Redis</li>
+            </ul>
+
             <div class="project-tech">
               <span>Java</span>
               <span>Spring Boot</span>
               <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>PokeAPI</span>
             </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/microservices-gym-leader" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
           </article>
 
           <article class="project-card">
-            <span class="project-status">Em breve</span>
-            <h3>Microsserviço com mensageria</h3>
+            <span class="project-status">Comparator Service</span>
+            <h3>microservices-typematch</h3>
             <p>
-              Demonstração de comunicação assíncrona entre serviços utilizando mensageria
-              e processamento de eventos.
+              Microserviço para comparar tipos, vantagens e desvantagens entre dois Pokémon,
+              consumindo dados do serviço Gym Leader e expondo uma API própria.
             </p>
+
+            <ul class="project-list">
+              <li>Comparação entre dois Pokémon</li>
+              <li>Consumo HTTP de serviço interno</li>
+              <li>API versionada em <code>/api/v1/compare/**</code></li>
+              <li>Integração com o gateway</li>
+            </ul>
+
             <div class="project-tech">
               <span>Java</span>
-              <span>RabbitMQ/Kafka</span>
+              <span>Spring Boot</span>
+              <span>RestTemplate</span>
+              <span>APIs REST</span>
+            </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/microservices-typematch" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">IA / FastAPI</span>
+            <h3>fusion-ia-api</h3>
+            <p>
+              API em Python/FastAPI para solicitar fusões de Pokémon, montar prompts e
+              evoluir para um pipeline de geração de imagens com IA.
+            </p>
+
+            <ul class="project-list">
+              <li>Endpoints para criação e consulta de fusões</li>
+              <li>Pipeline inicial com prompt builder</li>
+              <li>Backend stub para geração</li>
+              <li>Planejamento para persistência e imagens</li>
+            </ul>
+
+            <div class="project-tech">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Pydantic</span>
+              <span>IA</span>
+              <span>Uvicorn</span>
+            </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/fusion-ia-api" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status">Infraestrutura</span>
+            <h3>microservices-infra</h3>
+            <p>
+              Repositório de infraestrutura responsável por orquestrar localmente os
+              serviços do ecossistema com Docker Compose, incluindo gateway, microserviços,
+              Postgres e Redis.
+            </p>
+
+            <ul class="project-list">
+              <li>Ambiente local com Docker Compose</li>
+              <li>Orquestração dos microserviços</li>
+              <li>PostgreSQL e Redis</li>
+              <li>Documentação da arquitetura com Mermaid</li>
+            </ul>
+
+            <div class="project-tech">
               <span>Docker</span>
+              <span>Docker Compose</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>Makefile</span>
             </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/microservices-infra" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
           </article>
 
           <article class="project-card">
-            <span class="project-status">Em breve</span>
-            <h3>Dashboard de chamados</h3>
+            <span class="project-status">Desafio técnico</span>
+            <h3>gitmanager</h3>
             <p>
-              Painel demonstrativo para análise de chamados, ordens de serviço,
-              status, responsáveis, atrasos e indicadores operacionais.
+              Serviço de gerenciamento de perfis do GitHub desenvolvido como desafio técnico,
+              com sincronização de usuários, persistência em banco de dados, APIs REST e
+              autenticação via token.
             </p>
-            <div class="project-tech">
-              <span>Power BI</span>
-              <span>Excel</span>
-              <span>Dados</span>
-            </div>
-          </article>
 
-          <article class="project-card">
-            <span class="project-status">Em breve</span>
-            <h3>Automação de planilha</h3>
-            <p>
-              Controle automatizado com organização de dados, fórmulas, dashboards
-              e scripts para reduzir tarefas manuais.
-            </p>
+            <ul class="project-list">
+              <li>Busca de usuários na API pública do GitHub</li>
+              <li>Persistência com JPA/Hibernate</li>
+              <li>Relacionamento entre usuários e perfis</li>
+              <li>APIs REST para criação, atribuição e listagem</li>
+              <li>Autenticação via JWT</li>
+            </ul>
+
             <div class="project-tech">
-              <span>Google Sheets</span>
-              <span>Apps Script</span>
-              <span>Automação</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>JPA</span>
+              <span>Hibernate</span>
+              <span>JWT</span>
+              <span>REST API</span>
             </div>
+
+            <a class="project-link" href="https://github.com/DanielSanoli/gitmanager" target="_blank" rel="noopener">
+              Ver repositório
+            </a>
           </article>
         </div>
       </div>
@@ -457,18 +608,4 @@
         <div class="contact-links">
           <a href="mailto:daniel.sanoli28@gmail.com">daniel.sanoli28@gmail.com</a>
           <a href="https://github.com/DanielSanoli" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/daniel-oliveira-7b1063188/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2026 Daniel Oliveira. Desenvolvedor de Software Pleno.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+          <a href="https://www.linkedin.com/in/d
