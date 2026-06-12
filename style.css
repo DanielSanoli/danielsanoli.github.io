@@ -71,9 +71,11 @@ ul {
 
 .nav-links {
   display: flex;
-  gap: 22px;
+  align-items: center;
+  gap: 14px;
   list-style: none;
   font-size: 0.94rem;
+  padding-left: 0;
 }
 
 .nav-links a {
@@ -85,6 +87,28 @@ ul {
   color: #ffffff;
 }
 
+.nav-profile-button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-profile-button:hover {
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.nav-profile-button.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
 .menu-button {
   display: none;
   border: 0;
@@ -92,6 +116,18 @@ ul {
   color: #ffffff;
   font-size: 1.7rem;
   cursor: pointer;
+}
+
+/* PROFILE TOGGLE CONTENT */
+
+.profile-content,
+.hero-profile {
+  display: none;
+}
+
+.profile-content.active,
+.hero-profile.active {
+  display: block;
 }
 
 /* HERO */
@@ -387,14 +423,16 @@ h1 {
 }
 
 .project-grid,
-.freelance-grid {
+.freelance-grid,
+.process-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
 .project-card,
-.freelance-card {
+.freelance-card,
+.process-card {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -403,13 +441,15 @@ h1 {
 }
 
 .project-card h3,
-.freelance-card h3 {
+.freelance-card h3,
+.process-card h3 {
   margin: 12px 0;
   font-size: 1.22rem;
 }
 
 .project-card p,
-.freelance-card p {
+.freelance-card p,
+.process-card p {
   color: var(--muted);
   margin-bottom: 18px;
 }
@@ -456,6 +496,14 @@ h1 {
 
 /* FREELANCES */
 
+.freelance-card ul {
+  color: var(--muted);
+}
+
+.freelance-card li {
+  margin-bottom: 7px;
+}
+
 .freelance-note {
   margin-top: 28px;
   background: #ecfdf5;
@@ -463,6 +511,18 @@ h1 {
   border: 1px solid #bbf7d0;
   padding: 18px 20px;
   border-radius: var(--radius);
+}
+
+.process-card span {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 900;
+  border-radius: 50%;
 }
 
 /* CONTACT */
@@ -515,6 +575,7 @@ h1 {
   .skills-grid,
   .project-grid,
   .freelance-grid,
+  .process-grid,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -542,11 +603,17 @@ h1 {
     background: var(--bg);
     padding: 24px;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-profile-button {
+    width: 100%;
+    text-align: left;
   }
 
   .hero {
