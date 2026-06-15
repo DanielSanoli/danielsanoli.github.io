@@ -24,19 +24,19 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-          <li>
-            <button type="button" class="nav-profile-button active" data-profile="professional">
-              Perfil Profissional
-            </button>
-          </li>
-          
-          <li>
-            <button type="button" class="nav-profile-button" data-profile="freelancer">
-              Perfil Freelancer
-            </button>
-          </li>
-          
-          <li><a href="#contato">Contato</a></li>
+        <li>
+          <button type="button" class="nav-profile-button active" data-profile="professional">
+            Perfil Profissional
+          </button>
+        </li>
+
+        <li>
+          <button type="button" class="nav-profile-button" data-profile="freelancer">
+            Perfil Freelancer
+          </button>
+        </li>
+
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -362,8 +362,8 @@
 
           <p class="section-intro">
             Projetos pessoais e desafios técnicos desenvolvidos com foco em backend,
-            microsserviços, APIs, integrações, infraestrutura local com Docker e boas
-            práticas de desenvolvimento.
+            microsserviços, APIs, integrações, infraestrutura local com Docker, dashboards
+            e boas práticas de desenvolvimento.
           </p>
 
           <div class="featured-project">
@@ -398,6 +398,37 @@
           </div>
 
           <div class="project-grid">
+            <article class="project-card">
+              <span class="project-status">Dashboard financeiro</span>
+              <h3>finance-dash</h3>
+
+              <p>
+                MVP de dashboard financeiro para freelancers, MEIs e pequenos negócios
+                controlarem receitas, despesas, saldo mensal, categorias e metas financeiras.
+                O projeto combina backend Java/Spring Boot com frontend estático e gráficos.
+              </p>
+
+              <ul class="project-list">
+                <li>CRUD de lançamentos financeiros, categorias e metas</li>
+                <li>Dashboard mensal com receitas, despesas, saldo e agrupamentos por categoria</li>
+                <li>Frontend MVP com cards, tabela, filtros e gráficos com Chart.js</li>
+                <li>PostgreSQL, Docker Compose, Swagger/OpenAPI e testes automatizados</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java 21</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+                <span>JavaScript</span>
+                <span>Chart.js</span>
+                <span>Docker</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/finance-dash" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
             <article class="project-card">
               <span class="project-status">Gateway</span>
               <h3>porygonz-gateway</h3>
@@ -695,6 +726,81 @@
         <div class="freelance-note">
           <strong>Modelo de trabalho:</strong>
           projetos de escopo fechado, prazo curto e entregas objetivas.
+        </div>
+      </section>
+
+      <section id="projetos-freelancer" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Projeto freelancer</p>
+            <h2>FinanceDash</h2>
+          </div>
+
+          <p class="section-intro">
+            O FinanceDash é um projeto demonstrativo criado para representar um tipo de
+            solução que posso entregar para freelancers, MEIs e pequenos negócios que precisam
+            organizar finanças, visualizar indicadores e acompanhar metas mensais.
+          </p>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-status">MVP funcional</span>
+              <h3>FinanceDash — Dashboard financeiro automatizado</h3>
+
+              <p>
+                Aplicação para controle financeiro com cadastro de receitas e despesas,
+                categorização de lançamentos, metas financeiras e dashboard mensal com
+                indicadores visuais para tomada de decisão.
+              </p>
+
+              <ul class="project-list">
+                <li>Controle de entradas e saídas com filtros por mês, tipo e categoria</li>
+                <li>Resumo mensal com total de receitas, despesas, saldo e contagens</li>
+                <li>Metas financeiras com progresso calculado automaticamente</li>
+                <li>Interface web inicial com gráficos, cards, formulários e tabelas</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>PostgreSQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Chart.js</span>
+              </div>
+
+              <a class="project-link" href="https://github.com/DanielSanoli/finance-dash" target="_blank" rel="noopener">
+                Ver repositório
+              </a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-status">Serviço vendável</span>
+              <h3>Como isso vira um freela</h3>
+
+              <p>
+                A mesma base pode ser adaptada para clientes reais que precisam de um
+                controle financeiro simples, dashboard em planilha ou painel web para acompanhar
+                fluxo de caixa, gastos, metas e relatórios mensais.
+              </p>
+
+              <ul class="project-list">
+                <li>Dashboard financeiro para MEIs e prestadores de serviço</li>
+                <li>Automação de controles em Excel ou Google Sheets</li>
+                <li>Relatórios mensais com indicadores e gráficos</li>
+                <li>Customização por categoria, meta, serviço ou centro de custo</li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Dashboard</span>
+                <span>Automação</span>
+                <span>Relatórios</span>
+                <span>Planilhas</span>
+                <span>APIs</span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
