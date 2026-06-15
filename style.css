@@ -238,6 +238,10 @@ h1 {
   margin-bottom: 32px;
 }
 
+.project-grid + .section-heading {
+  margin-top: 64px;
+}
+
 .section-heading h2,
 .section h2 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -632,6 +636,7 @@ h1 {
   .hero-text {
     font-size: 1.05rem;
   }
+
   /* CONTROLE DE PERFIL */
 
   .profile-content,
