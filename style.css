@@ -498,6 +498,119 @@ h1 {
   transform: translateX(3px);
 }
 
+.project-link.demo {
+  background: var(--accent);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 10px 14px;
+  margin-right: 12px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.project-link.demo:hover {
+  background: #16a34a;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.project-link.demo.pending {
+  cursor: not-allowed;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+/* PRICING */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--card-shadow);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary);
+  box-shadow: 0 18px 46px rgba(37, 99, 235, 0.14);
+}
+
+.pricing-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.22rem;
+}
+
+.pricing-sub {
+  color: var(--muted);
+  min-height: 52px;
+  margin-bottom: 18px;
+}
+
+.pricing-price {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.pricing-price strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1.85rem;
+  line-height: 1.1;
+}
+
+.pricing-card ul {
+  flex: 1;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-card li {
+  position: relative;
+  color: var(--muted);
+  margin-bottom: 9px;
+  padding-left: 24px;
+}
+
+.pricing-card li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.pricing-cta {
+  display: block;
+  text-align: center;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.pricing-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.pricing-card.featured .pricing-cta {
+  background: var(--accent);
+}
+
+.pricing-card.featured .pricing-cta:hover {
+  background: #16a34a;
+}
+
 /* FREELANCES */
 
 .freelance-card ul {
@@ -515,6 +628,26 @@ h1 {
   border: 1px solid #bbf7d0;
   padding: 18px 20px;
   border-radius: var(--radius);
+}
+
+.ia-banner {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #dbeafe;
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--card-shadow);
+  font-size: 1.05rem;
+}
+
+.ia-banner strong {
+  color: #ffffff;
+}
+
+.ia-price {
+  color: var(--accent) !important;
+  font-weight: 900;
+  margin: 0;
 }
 
 .process-card span {
@@ -578,6 +711,7 @@ h1 {
   .about-grid,
   .skills-grid,
   .project-grid,
+  .pricing-grid,
   .freelance-grid,
   .process-grid,
   .contact-section {
