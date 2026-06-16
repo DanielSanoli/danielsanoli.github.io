@@ -282,6 +282,7 @@
               <span>Java</span>
               <span>Spring Boot</span>
               <span>Spring Framework</span>
+              <span>Spring AI</span>
               <span>JPA / Hibernate</span>
               <span>Maven</span>
               <span>Node.js</span>
@@ -297,6 +298,7 @@
               <span>Microsserviços</span>
               <span>Apache Camel</span>
               <span>Mainframe</span>
+              <span>OpenAI Image Model</span>
               <span>RabbitMQ</span>
               <span>Kafka</span>
               <span>Redis</span>
@@ -375,7 +377,7 @@
                 Conjunto de repositórios conectados que formam um ecossistema de microsserviços
                 inspirado no universo Pokémon. A solução demonstra comunicação entre serviços,
                 API Gateway, consultas a dados externos, comparação de tipos, geração de fusões
-                com IA e infraestrutura local para orquestração.
+                com IA usando Spring AI e infraestrutura local para orquestração.
               </p>
 
               <p>
@@ -388,8 +390,8 @@
               <span>Java</span>
               <span>Spring Boot</span>
               <span>Spring Cloud Gateway</span>
-              <span>Python</span>
-              <span>FastAPI</span>
+              <span>Spring AI</span>
+              <span>OpenAI Image Model</span>
               <span>Docker Compose</span>
               <span>PostgreSQL</span>
               <span>Redis</span>
@@ -490,27 +492,30 @@
             </article>
 
             <article class="project-card">
-              <span class="project-status">IA / FastAPI</span>
+              <span class="project-status">IA / Spring AI</span>
               <h3>fusion-ia-api</h3>
 
               <p>
-                API em Python/FastAPI para solicitar fusões de Pokémon, montar prompts e
-                evoluir para um pipeline de geração de imagens com IA.
+                Microserviço Java/Spring Boot responsável pela criação de fusões de Pokémon
+                com geração de imagem por IA. A API foi migrada de FastAPI para Java e agora
+                utiliza arquitetura preparada para providers <code>stub</code> e <code>openai</code> com Spring AI.
               </p>
 
               <ul class="project-list">
-                <li>Endpoints para criação e consulta de fusões</li>
-                <li>Pipeline inicial com prompt builder</li>
-                <li>Backend stub para geração</li>
-                <li>Planejamento para persistência e imagens</li>
+                <li>Endpoints REST versionados para criação, listagem e consulta de fusões</li>
+                <li>Prompt builder estruturado para geração de fusões entre Pokémon</li>
+                <li>Provider <code>stub</code> para execução local sem credenciais externas</li>
+                <li>Provider real <code>openai</code> com Spring AI e OpenAI Image Model</li>
+                <li>Docker multi-stage build e porta <code>8000</code> compatível com o gateway</li>
               </ul>
 
               <div class="project-tech">
-                <span>Python</span>
-                <span>FastAPI</span>
-                <span>Pydantic</span>
-                <span>IA</span>
-                <span>Uvicorn</span>
+                <span>Java 21</span>
+                <span>Spring Boot</span>
+                <span>Spring AI</span>
+                <span>OpenAI</span>
+                <span>Docker</span>
+                <span>APIs REST</span>
               </div>
 
               <a class="project-link" href="https://github.com/DanielSanoli/fusion-ia-api" target="_blank" rel="noopener">
@@ -852,7 +857,7 @@
               <span>4</span>
               <h3>Entrega</h3>
               <p>
-                Entrego o projeto finalizado, com orientações básicas de uso e manutenção.
+                Entrego o projeto finalizado, com orientções básicas de uso e manutenção.
               </p>
             </article>
           </div>
